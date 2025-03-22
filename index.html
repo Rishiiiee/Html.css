@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .carousel-container {
+            width: 80%;
+            margin: 50px auto;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .carousel img {
+            border-radius: 10px;
+            height: 700px;
+            width: 250px;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 80px;
+            margin-top: 30px;
+            color: teal
+            
+        }
+    </style>
+</head>
+<body>
+
+    <h1>It's Crik Carousel</h1>
+
+    <div class="carousel-container" style="">
+        <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://wallpapercave.com/wp/wp6390972.jpg" class="d-block w-100" alt="Nature">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://img1.hscicdn.com/image/upload/f_auto/lsci/db/PICTURES/CMS/348100/348138.jpg" class="d-block w-100" alt="City">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://wallpaperaccess.com/full/2595445.jpg" class="d-block w-100" alt="Technology">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://c.ndtvimg.com/2023-10/rrau1beg_shreyas-iyer_625x300_30_October_23.jpg" class="d-block w-100" alt="Technology">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://th.bing.com/th/id/OIP.U3VKMQHrBbVdUNYj6ao_QwHaEK?rs=1&pid=ImgDetMain" class="d-block w-100" alt="Technology">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://wallpapercave.com/wp/wp4024296.jpg" class="d-block w-100" alt="Technology">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://assets.odishareporter.in/uploadimage/library/16_9/16_9_0/Kapil_Dev_1685622084.jpg" class="d-block w-100" alt="Technology">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", ()=> {
+        let carousel = new bootstrap.Carousel(document.querySelector("#imageCarousel"), {
+            interval: 500, // Change image every 3 seconds
+
+        });
+    });
+</script>
